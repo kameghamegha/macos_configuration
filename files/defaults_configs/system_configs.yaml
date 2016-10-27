@@ -135,4 +135,17 @@ firewall__system_firewall_state:
         - 10.11
     sudo: false
     global: false
+devices__ir_controller:
+    description:
+    domain: 
+    key: 
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: 
+    global: 
 ...
