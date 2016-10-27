@@ -1,0 +1,15 @@
+---
+# 'defaults -currentHost [action] [domain] ...' type of configs
+# All need to be run as a specific (non-root) user - I think
+screensaver__idle_time:
+    10.11:
+        description: |
+            Idle to screensaver time (in seconds)
+            For example, 'defaults -currentHost write com.apple.screensaver idleTime 300'
+        domain: com.apple.screensaver
+        key: idleTime
+        action:
+            set:
+        sudo: false
+        global: false
+...

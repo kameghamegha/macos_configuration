@@ -1,0 +1,12 @@
+topic__what_it_does:
+    "10.11,10.12":
+        description:
+        domain: 
+        key: 
+        action:
+            disable:
+                value: 0
+            enable: 
+                value: 1
+        sudo: 
+        global: 
