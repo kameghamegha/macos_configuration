@@ -1,0 +1,13 @@
+topic__what_it_does:
+    description:
+    domain: 
+    key: 
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: 
+    global: 

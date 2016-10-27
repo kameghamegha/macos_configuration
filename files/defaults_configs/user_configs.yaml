@@ -1,0 +1,87 @@
+---
+# ~/Library/Preferences/ configs
+# All need to be run as a specific (non-root) user
+login_window__password_retries_until_hint:
+    description: Must be an integer. Setting as 0 disables this.
+    domain: com.apple.loginwindow
+    key: RetriesUntilHint
+    action:
+        set:
+        disable:
+            value: 0
+    supported_on:
+        - 10.11
+    sudo: true
+    global: false
+screensaver__ask_for_password:
+    description:
+    domain: com.apple.screensaver
+    key: askForPassword
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+screensaver__ask_for_password_delay:
+    description: Number of seconds between screensaver starting and password being required.
+    domain: com.apple.screensaver
+    key: askForPasswordDelay
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+safari__auto_open_safe_files:
+    description: This works whether Safari is currently running or not
+    domain: com.apple.Safari
+    key: AutoOpenSafeDownloads
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+safari__spotlight_suggestions:
+    description: |
+        Safari "Spotlight" respects the system-wide Spotlight privacy settings
+        EXCEPT when it comes to submitting search metrics to Apple. To disable
+        these metrics, we have to disable Safari's *seperate* setting (below)
+    domain: com.apple.Safari
+    key: UniversalSearchEnabled
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+mail_app__auto_load_remote_content:
+    description: |
+        Control autoload of remote content in Mail.app
+        The domain com.apple.mail-shared only exists if they have started the
+        setup of Mail.app, but will run even if they didn't complete the setup.
+    domain: com.apple.mail-shared
+    key: DisableURLLoading
+    action:
+        disable:
+            value: 1
+        enable: 
+            value: 0
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+...

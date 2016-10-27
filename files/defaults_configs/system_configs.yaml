@@ -1,0 +1,138 @@
+---
+# /Library/Preferences/ configs
+updates__auto_check:
+    description: 
+    domain: /Library/Preferences/com.apple.SoftwareUpdate
+    key: AutomaticCheckEnabled
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: true
+    global: false
+updates__auto_download:
+    description: 
+    domain: /Library/Preferences/com.apple.SoftwareUpdate
+    key: AutomaticDownload
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: true
+    global: false
+updates__auto_update_restart_required:
+    description: 
+    domain: /Library/Preferences/com.apple.commerce.plist
+    key: AutoUpdateRestartRequired
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: true
+    global: false
+updates__auto_update:
+    description: 
+    domain: /Library/Preferences/com.apple.commerce.plist
+    key: AutoUpdate
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: true
+    global: false
+login_window__guest_account_login:
+    description:
+    domain: /Library/Preferences/com.apple.loginwindow
+    key: GuestEnabled
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+login_window__disable_auto_login:
+    description:
+    domain: /Library/Preferences/com.apple.loginwindow
+    key: autoLoginUser
+    action:
+        disable:
+            action: delete
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+sharing__guest_access_to_afp_shared_folders:
+    description:
+    domain: /Library/Preferences/com.apple.AppleFileServer
+    key: guestAccess
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+sharing__guest_access_to_smb_shared_folders:
+    description:
+    domain: /Library/Preferences/com.apple.smb.server
+    key: AllowGuestAccess
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+menubar__localization_icon:
+    description: Show icon in toolbar when localization is used
+    domain: /Library/Preferences/com.apple.locationmenu
+    key: ShowSystemServices
+    action:
+        disable:
+            value: 0
+        enable: 
+            value: 1
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+firewall__system_firewall_state:
+    description: |
+        Int 1 enables the firewall and disables "Block All Incoming Connections"
+        Int 2 enables the firewall and enables the setting "Block All Incoming 
+        Connections," which allows essential services like DHCP and ipsec, but
+        blocks all the rest.
+    domain: /Library/Preferences/com.apple.alf
+    key: globalstate
+    action:
+        set:
+            value:
+                - 0
+                - 1
+                - 2
+    supported_on:
+        - 10.11
+    sudo: false
+    global: false
+...
