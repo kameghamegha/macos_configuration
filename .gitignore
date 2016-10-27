@@ -15,4 +15,5 @@ bin/*
 .kitchen/
 .kitchen.local.yml
 .kitchen.yml
-
+.vscode/
+.DS_Store
