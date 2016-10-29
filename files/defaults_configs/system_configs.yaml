@@ -137,4 +137,40 @@ devices__ir_controller:
                 value: 1
         sudo: 
         global: 
+bluetooth__system_bluetooth_state:
+    10.11:
+        description: Turn Bluetooth on and off
+        domain: /Library/Preferences/com.apple.Bluetooth.plist
+        key: ControllerPowerState
+        action:
+            disable:
+                value: 0
+            enable:
+                value: 1
+        sudo: true
+        global: false
+bluetooth__setup_assistant_detect_keyboard:
+    10.11:
+        description: Allow Bluetooth Setup Assistant at startup if no keyboard is detected
+        domain: /Library/Preferences/com.apple.Bluetooth.plist
+        key: BluetoothAutoSeekKeyboard
+        action:
+            disable:
+                value: 0
+            enable:
+                value: 1
+        sudo: true
+        global: false
+bluetooth__setup_assistant_detect_mouse:
+    10.11:
+        description: Allow Bluetooth Setup Assistant at startup if no keyboard is detected
+        domain: /Library/Preferences/com.apple.Bluetooth.plist
+        key: BluetoothAutoSeekPointingDevice
+        action:
+            disable:
+                value: 0
+            enable:
+                value: 1
+        sudo: true
+        global: false
 ...
