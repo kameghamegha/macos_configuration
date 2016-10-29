@@ -24,12 +24,14 @@ property :value,
 # Run as a specific user, otherwise run as node's current user
 property :user,
           kind_of: String,
-          #TODO(meg): Import this from my hardening recipe
-          default: node['macos_config']['user'],
+          default: macos_current_user(node['platform']),
           required: true
 
 action :enable do
-  # TODO
+  feature_key = properties_to_feature_key(new_resource.topic, new_resource.feature)
+  puts("\n")
+  puts(feature_key)
+  puts(new_resource.user)
 end
 
 action :disable do

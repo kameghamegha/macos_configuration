@@ -4,6 +4,12 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
+
+macos_configuration 'Auto check' do
+  topic 'updates'
+  action :enable
+end
+
 SYSTEM_CONFIGS = YAML.load_file("#{Dir.pwd}/files/defaults_configs/system_configs.yaml")
 USER_CONFIGS = YAML.load_file("#{Dir.pwd}/files/defaults_configs/user_configs.yaml")
 CURRENTHOST_CONFIGS = YAML.load_file("#{Dir.pwd}/files/defaults_configs/currenthost_configs.yaml")
@@ -28,4 +34,3 @@ def show_feature(feature_class, feature, version, action)
     global: feature_class[feature][version]['global']
   }
 end
-
